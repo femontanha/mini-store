@@ -1,0 +1,51 @@
+// *************************************
+//
+//   Config
+//   -> Fonts, Variables
+//
+// *************************************
+
+// -------------------------------------
+//   Colors
+// -------------------------------------
+
+// ----- Base ----- //
+
+$c-main-color: #1A75CE;
+$c-text: #999999;
+$c-lighten: #FFFFFF;
+
+// ----- Components ----- //
+
+$header-background: $c-main-color;
+
+// -------------------------------------
+//   Base
+// -------------------------------------
+
+// ----- Borders & Box Shadow ----- //
+
+$b-borderRadius: 5px;
+$b-inputBorderRadius: 3px;
+$b-borderStyle: solid;
+$b-borderWidth: 2px;
+
+// ----- Typography ----- //
+
+$b-fontFamily: 'Open Sans', sans-serif;
+$b-fontSize: 16px;
+$b-lineHeight: 1.2;
+$b-fontSemiBold: 400;
+$b-fontBold: 600;
+
+// -------------------------------------
+//   Components
+// -------------------------------------
+
+// ----- Grid ----- //
+
+// Breakpoints
+
+$g-s: rem(768px);
+$g-m: rem(992px);
+$g-l: rem(1200px);

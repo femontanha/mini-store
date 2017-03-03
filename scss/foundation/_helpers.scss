@@ -1,0 +1,48 @@
+// *************************************
+//
+//   Helpers
+//   -> Functions, Mixins, Animations
+//
+// *************************************
+
+// -------------------------------------
+//   Functions
+// -------------------------------------
+
+// ----- Em ----- //
+// -> Converts pixel value to an em
+//
+// $target - the target pixel size
+// $context - the context font-size
+
+@function em($target, $context: $b-fontSize) {
+  @if ($target == 0) {
+    @return 0;
+  } @else {
+    @return ($target / $context) * 1em;
+  }
+}
+
+// ----- Rem ----- //
+// -> Converts pixel value to rems
+//
+// eg. for a relational value of 12px write rem(12)
+// Assumes $em-base is the font-size of <html>
+
+@function rem($pxval) {
+  @return ($pxval / $b-fontSize) * 1rem;
+}
+
+// ----- Respond-to ----- //
+// -> Generates a media query
+//
+// $val - the breakpoint size
+// $query - the type of query ('min-width', 'max-width')
+// $media - the media type ('screen', 'print', etc.)
+// @content - the generated content within the mixin
+
+@mixin respond-to($val, $query: min-width, $media: screen) {
+  @media #{$media} and ($query: $val) {
+    @content
+  }
+}

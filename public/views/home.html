@@ -1,0 +1,18 @@
+<section class="c-card-list">
+  <div class="c-card-list">
+    <a href="{{ obj.url }}" class="c-card" ng-repeat="obj in product">
+      <div class="c-card-title">
+        {{ obj.name }}
+      </div>
+      <img class="c-card-product" src="{{ obj.productImg }}" />
+      <div class="c-card-footer">
+        <del class="c-card-footer-price">{{ obj.price | currency: "R$ " }}</del>
+        <div class="c-card-footer-new-price">{{ obj.new_price | currency: "R$ " }}</div>
+        <div class="c-card-footer-installment">{{ obj.installment }}</div>
+        <div class="c-card-footer-buy">
+          <img class="c-card-footer-buy-icon" src="img/shopping-cart.png" />
+        </div>
+      </div>
+    </a>
+  </div>
+</section>

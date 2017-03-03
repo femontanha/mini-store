@@ -1,0 +1,27 @@
+// *************************************
+//
+//   Card List
+//   -> Individual style containers
+//
+// *************************************
+
+$component: c-card-list;
+
+.#{ $component } {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin: rem(15px) 0;
+}
+
+// -------------------------------------
+//   Scaffolding
+// -------------------------------------
+
+// ----- Card ----- //
+
+.#{ $component } .c-card {
+  width: rem(400px);
+  margin: rem(15px);
+}

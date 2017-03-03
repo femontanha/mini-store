@@ -1,0 +1,113 @@
+// *************************************
+//
+//   Card
+//   -> Individual style containers
+//
+// *************************************
+
+$component: c-card;
+
+.#{ $component } {
+  border: #EEEEEE 1px solid;
+  position: relative;
+  text-decoration: none;
+
+  &:after {
+    box-shadow: 0 0 15px 0 rgba(0,0,0,.3);
+    content: '';
+    display: block;
+    height: 100%;
+    left: 0;
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    transition: all 120ms ease-in;
+    width: 100%;
+  }
+
+  &:hover {
+    &:after {
+      opacity: 1;
+      height: 100%;
+    }
+  }
+}
+
+// -------------------------------------
+//   Scaffolding
+// -------------------------------------
+
+// ----- Title ----- //
+
+.#{ $component }-title {
+  color: #2196f3;
+  font-size: rem(14px);
+  padding: rem(20px) rem(30px) 0;
+  text-align: center;
+  height: rem(35px);
+}
+
+// ----- Product ----- //
+
+.#{ $component }-product {
+  display: block;
+  height: 170px;
+  width: 170px;
+  margin: rem(15px) auto;
+}
+
+// ----- Footer ----- //
+
+.#{ $component }-footer {
+  border-top: #EEEEEE 1px solid;
+  padding: rem(5px) rem(10px);
+  position: relative;
+}
+
+// ----- Footer Price ----- //
+
+.#{ $component }-footer-price {
+  font-size: rem(11px);
+  color: #999;
+}
+
+// ----- Footer New Price ----- //
+
+.#{ $component }-footer-new-price {
+  font-size: rem(17px);
+  color: #4caf50;
+  font-weight: bold;
+}
+
+// ----- Footer Installment ----- //
+
+.#{ $component }-footer-installment {
+  font-size: rem(11px);
+  color: #999;
+}
+
+// ----- Footer Buy ----- //
+
+.#{ $component }-footer-buy {
+  background-color: #4caf50;
+  bottom: 0;
+  color: #FFF;
+  height: rem(63px);
+  line-height: rem(63px);
+  opacity: 0;
+  position: absolute;
+  right: 0;
+  text-align: center;
+  transition: all 120ms ease-in;
+  width: rem(63px);
+
+  .#{ $component }:hover & {
+    opacity: 1;
+  }
+}
+
+// ----- Footer Buy Icon ----- //
+
+.#{ $component }-footer-buy-icon {
+  margin-top: rem(16px);
+}

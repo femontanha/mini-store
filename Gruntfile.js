@@ -1,5 +1,7 @@
 module.exports = function(grunt) {
 
+  var normalize = require('node-normalize-scss').includePaths;
+
   require('time-grunt')(grunt);
   require('jit-grunt')(grunt);
 
@@ -14,12 +16,13 @@ module.exports = function(grunt) {
         options: {
           style: 'compressed',
           sourcemap: 'none',
-          noCache: true
+          noCache: true,
+          includePaths: [].concat(normalize),
         },
         files: [
           {
             expand: true,
-            cwd: "scss/app",
+            cwd: "scss/",
             src: ["**/*.scss"],
             dest: "./public/css",
             ext: "-min.css"
