@@ -1,16 +1,24 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br" ng-app="miniStore">
   <head>
+    <base href="/">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Mini Store</title>
+    <link rel="stylesheet" href="css/app-min.css">
   </head>
   <body>
-    <header class="main-header">
-      <a href="/" class="link-header">
-        <h1 class="header-title">Mini Store</h1>
-      </a>
+    <header class="c-header">
+      <h1 class="c-header__title">Mini Store</h1>
     </header>
+    <div class="site-wrap">
+      <ng-view></ng-view>
+    </div>
+    <script src="js/lib/angular.min.js"></script>
+    <script src="js/lib/angular-route.min.js"></script>
+    <script src="js/lib/angular-resource.min.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/controller/list-product-controller.js"></script>
   </body>
 </html>

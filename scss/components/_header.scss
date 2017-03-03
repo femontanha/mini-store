@@ -1,0 +1,27 @@
+// *************************************
+//
+//   Header
+//   -> Individual style containers
+//
+// *************************************
+
+$component: c-header;
+
+.#{ $component } {
+  background-color: $header-background;
+  height: rem(56px);
+  padding: 0 rem(25px);
+}
+
+// -------------------------------------
+//   Scaffolding
+// -------------------------------------
+
+// ----- Logo ----- //
+
+.#{ $component }__title {
+  color: $c-lighten;
+  font-size: rem(22px);
+  line-height: rem(56px);
+  margin: 0;
+}
