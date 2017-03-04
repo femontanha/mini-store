@@ -26,6 +26,8 @@ $component: c-card;
   }
 
   &:hover {
+    text-decoration: none;
+    
     &:after {
       opacity: 1;
       height: 100%;

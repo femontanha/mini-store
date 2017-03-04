@@ -1,0 +1,25 @@
+// *************************************
+//
+//   Address
+//   -> Individual style containers
+//
+// *************************************
+
+$component: c-address;
+
+.#{ $component } {
+  border: 1px solid;
+  margin-top: rem(30px);
+
+  ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+}
+
+// -------------------------------------
+//   Scaffolding
+// -------------------------------------
+
+// ----- Title ----- //
