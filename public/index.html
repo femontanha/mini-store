@@ -10,7 +10,20 @@
   </head>
   <body>
     <header class="c-header">
-      <h1 class="c-header__title">Mini Store</h1>
+      <a href="/" class="c-header-title">Mini Store</a>
+      <nav class="c-header-nav">
+        <ul>
+          <li>
+            <a href="/">Produtos</a>
+          </li>
+          <li>
+            <a href="/enderecos">Endereços</a>
+          </li>
+          <li>
+            <a href="/profile">Profile</a>
+          </li>
+        </ul>
+      </nav>
     </header>
     <div class="site-wrap">
       <ng-view></ng-view>
@@ -20,5 +33,8 @@
     <script src="js/lib/angular-resource.min.js"></script>
     <script src="js/main.js"></script>
     <script src="js/controller/list-product-controller.js"></script>
+    <script src="js/controller/list-address-controller.js"></script>
+    <script src="js/controller/address-controller.js"></script>
+    <script src="js/services/ministore-services.js"></script>
   </body>
 </html>

@@ -1,8 +1,9 @@
-var db = require('../../config/database');
+var productDB = require('../../config/product-db');
+var addressDB = require('../../config/address-db');
 var api = {};
 
-api.add = function(req, res) {
-  db.insert(req.body, function(err, newDoc) {
+api.addAddress = function(req, res) {
+  addressDB.insert(req.body, function(err, newDoc) {
     if(err) return console.log(err);
     console.log('Added: ' + newDoc._id);
     console.log(newDoc);
@@ -10,15 +11,8 @@ api.add = function(req, res) {
   });
 };
 
-api.search = function(req, res) {
-  db.findOne({_id: req.params.productId }, function(err, doc) {
-    if (err) return console.log(err);
-    res.json(doc);
-  });
-};
-
-api.update = function(req, res) {
-  db.update({_id : req.params.productId }, req.body, function(err, numReplaced) {
+api.updateAddress = function(req, res) {
+  addressDB.update({_id : req.params.productId }, req.body, function(err, numReplaced) {
     if (err) return console.log(err);
     if(numReplaced) res.status(200).end();
     res.status(500).end();
@@ -27,23 +21,22 @@ api.update = function(req, res) {
   });
 };
 
-api.list = function(req, res) {
-  db.find({}).sort({name: 1}).exec(function(err, doc) {
+api.listProducts = function(req, res) {
+  productDB.find({}).sort({name: 1}).exec(function(err, doc) {
     if (err) return console.log(err);
     res.json(doc);
   });
 };
 
-api.listForGroup = function(req, res) {
-  var grupoId = parseInt(req.params.grupoId);
-  db.find({grupo: grupoId}, function(err, doc) {
+api.listAddress = function(req, res) {
+  addressDB.find({}).sort({name: 1}).exec(function(err, doc) {
     if (err) return console.log(err);
     res.json(doc);
   });
 };
 
-api.remove = function(req, res) {
-  db.remove({ _id: req.params.productId }, {}, function (err, numRemoved) {
+api.removeAddress = function(req, res) {
+  addressDB.remove({ _id: req.params.productId }, {}, function (err, numRemoved) {
     if (err) return console.log(err);
     console.log('Removed');
 

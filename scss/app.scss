@@ -6,6 +6,7 @@
 // *************************************
 
 @import 'normalize';
+@import 'node_modules/bootstrap-sass/assets/stylesheets/bootstrap';
 
 // -------------------------------------
 //   Foundation
@@ -21,6 +22,7 @@
 
 @import 'components/header';
 @import 'components/card';
+@import 'components/address';
 
 // -------------------------------------
 //   Structures

@@ -4,13 +4,15 @@ var path  = require('path');
 module.exports  = function(app) {
 
   app.route('/products')
-    .post(api.add)
-    .get(api.list);
+    .get(api.listProducts);
+
+  app.route('/address')
+    .post(api.addAddress)
+    .get(api.listAddress);
 
   app.route('/products/:productId')
-    .delete(api.remove)
-    .get(api.search)
-    .put(api.update);
+    .delete(api.removeAddress)
+    .put(api.updateAddress);
 
   app.all('/*', function(req, res) {
     res.sendFile(path.resolve('public/index.html'));

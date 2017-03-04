@@ -11,17 +11,54 @@ $component: c-header;
   background-color: $header-background;
   height: rem(56px);
   padding: 0 rem(25px);
+  position: relative;
 }
 
 // -------------------------------------
 //   Scaffolding
 // -------------------------------------
 
-// ----- Logo ----- //
+// ----- Title ----- //
 
-.#{ $component }__title {
+.#{ $component }-title {
   color: $c-lighten;
   font-size: rem(22px);
   line-height: rem(56px);
   margin: 0;
+
+  &:hover,
+  &:active,
+  &:focus {
+    color: $c-lighten;
+    text-decoration: none;
+  }
+}
+
+// ----- Nav ----- //
+
+.#{ $component }-nav {
+  position: absolute;
+  right: rem(30px);
+  top: rem(20px);
+
+  ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  li {
+    display: inline-block;
+    margin-left: rem(30px);
+  }
+
+  a {
+    color: $c-lighten;
+    font-weight: bold;
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
 }

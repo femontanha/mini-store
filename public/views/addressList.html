@@ -1,0 +1,25 @@
+<section class="c-address-list">
+  <a href="/endereco/novo" class="c-card-new">
+    Adicionar
+  </a>
+  <div class="c-address" ng-repeat="obj in address">
+    <ul>
+      <li>
+        Fellipe Azambuja
+      </li>
+      <li>
+        {{ obj.street }}, {{ obj.number }}
+      </li>
+      <li>
+        {{ obj.neighborhood }}
+      </li>
+      <li>
+        {{ obj.zip }}
+      </li>
+      <li>
+        {{ obj.city }}, {{ obj.state }}
+      </li>
+    </ul>
+    <a href="/endereco/editar/{{ obj._id }}">Alterar</a>
+  </div>
+</section>
