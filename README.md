@@ -7,7 +7,7 @@
 
 ## Overview (PT-BR)
 
-[![IMAGE ALT TEXT HERE](https://img.youtube.com/vi/id/0.jpg)](https://www.youtube.com/watch?v=id)
+[![IMAGE ALT TEXT HERE](https://img.youtube.com/vi/kFfm8I9ogt8/0.jpg)](https://www.youtube.com/watch?v=kFfm8I9ogt8)
 
 ## Setup
 

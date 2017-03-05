@@ -1,7 +1,6 @@
-{"street":"Rua do Chaos","number":"98","neighborhood":"Vila Formosa","zip":"123123-123","city":"Rio de Janeiro","state":"Rio de Janeiro","_id":"FcrQGJC74JJwh4dc"}
-{"street":"Rua do Chaos","number":"99","neighborhood":"Vila Formosa","zip":"133345-705","city":"São Paulo","state":"São Paulo","_id":"Q52R6wsJ1te8kBrS"}
-{"street":"Rua do Abilidebob","number":"10","neighborhood":"Vila Abril","zip":"13334-123","city":"São Paulo","state":"São Paulo","_id":"tMivhuW9cYARL1Wg"}
-{"street":"Rua do Chaos","number":"98","neighborhood":"Vila Formosa","zip":"123123-123","city":"São Paulo","state":"São Paulo","_id":"FcrQGJC74JJwh4dc"}
 {"street":"Rua do Chaos","number":"10","neighborhood":"Vila Formosa","zip":"123123-123","city":"São Paulo","state":"São Paulo","_id":"FcrQGJC74JJwh4dc"}
-{"$$deleted":true,"_id":"tMivhuW9cYARL1Wg"}
 {"street":"Rua da Crise","number":"999","neighborhood":"Vila do Bairro","zip":"13312-123","city":"São Paulo","state":"São Paulo","_id":"Giu4dazGEVetVKwW"}
+{"street":"Rua do Chaos","number":"99","neighborhood":"Vila Formosa","zip":"133345-705","city":"São Paulo","state":"São Paulo","_id":"Q52R6wsJ1te8kBrS"}
+{"street":"Rua Dionisio","number":"91","neighborhood":"Jardim Europa","zip":"133340-13","city":"Indaiatuba","state":"São Paulo","_id":"iyW6m9TIJ3Tvtlqp"}
+{"street":"Rua Dionisio","number":"85","neighborhood":"Jardim Europa","zip":"133340-13","city":"Indaiatuba","state":"São Paulo","_id":"iyW6m9TIJ3Tvtlqp"}
+{"$$deleted":true,"_id":"iyW6m9TIJ3Tvtlqp"}
