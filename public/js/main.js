@@ -24,8 +24,7 @@ angular.module('miniStore', ['ngRoute', 'ministoreServices'])
   });
 
   $routeProvider.when('/profile', {
-    templateUrl: 'views/home.html',
-    controller: 'ListProductController'
+    templateUrl: 'views/profile.html'
   });
 
   $routeProvider.otherwise({
