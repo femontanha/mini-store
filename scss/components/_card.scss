@@ -27,7 +27,7 @@ $component: c-card;
 
   &:hover {
     text-decoration: none;
-    
+
     &:after {
       opacity: 1;
       height: 100%;
@@ -94,8 +94,8 @@ $component: c-card;
   background-color: #4caf50;
   bottom: 0;
   color: #FFF;
-  height: rem(63px);
-  line-height: rem(63px);
+  height: rem(72px);
+  line-height: rem(72px);
   opacity: 0;
   position: absolute;
   right: 0;
@@ -106,10 +106,4 @@ $component: c-card;
   .#{ $component }:hover & {
     opacity: 1;
   }
-}
-
-// ----- Footer Buy Icon ----- //
-
-.#{ $component }-footer-buy-icon {
-  margin-top: rem(16px);
 }

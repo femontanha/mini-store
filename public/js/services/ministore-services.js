@@ -5,10 +5,9 @@ angular.module('ministoreServices', ['ngResource'])
       method: 'PUT'
     }
   });
-
 })
 .factory('addressRecurse', function( $resource ){
-  return $resource('address', null, {
+  return $resource('address/:addressId', null, {
     update: {
       method: 'PUT'
     }
@@ -26,25 +25,25 @@ angular.module('ministoreServices', ['ngResource'])
         }, address, function(){
           $rootScope.$broadcast('registerAddress');
           resolve({
-            msg: 'Endereço ' + address.name + ' atualizado com sucesso.',
+            msg: 'Endereço atualizado com sucesso.',
             add: false
           });
         }, function( error ){
           console.error(error);
           reject({
-            msg: 'Ocorreu algum erro e ' + address.name + ' não foi atualizado.'
+            msg: 'Ocorreu algum erro e não foi atualizado.'
           });
         });
       } else {
         addressRecurse.save(address, function(){
           $rootScope.$broadcast('registerAddress');
           resolve({
-            msg: 'Endereço ' + address.name + ' foi adicionado com sucesso!',
+            msg: 'Endereço foi adicionado com sucesso!',
             add: true
           });
         }, function( error ){
           reject({
-            msg: address.name + ' não foi adicionado'
+            msg: 'Novo endereço não foi adicionado'
           });
         });
       }

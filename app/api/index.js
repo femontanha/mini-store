@@ -11,8 +11,15 @@ api.addAddress = function(req, res) {
   });
 };
 
+api.searchAddress = function(req, res) {
+  addressDB.findOne({_id: req.params.addressId }, function(err, doc) {
+    if (err) return console.log(err);
+    res.json(doc);
+  });
+};
+
 api.updateAddress = function(req, res) {
-  addressDB.update({_id : req.params.productId }, req.body, function(err, numReplaced) {
+  addressDB.update({_id : req.params.addressId }, req.body, function(err, numReplaced) {
     if (err) return console.log(err);
     if(numReplaced) res.status(200).end();
     res.status(500).end();
@@ -36,7 +43,7 @@ api.listAddress = function(req, res) {
 };
 
 api.removeAddress = function(req, res) {
-  addressDB.remove({ _id: req.params.productId }, {}, function (err, numRemoved) {
+  addressDB.remove({ _id: req.params.addressId }, {}, function (err, numRemoved) {
     if (err) return console.log(err);
     console.log('Removed');
 

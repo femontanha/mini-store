@@ -1,25 +1,44 @@
-<section class="c-address-list">
-  <a href="/endereco/novo" class="c-card-new">
-    Adicionar
-  </a>
-  <div class="c-address" ng-repeat="obj in address">
-    <ul>
-      <li>
-        Fellipe Azambuja
-      </li>
-      <li>
-        {{ obj.street }}, {{ obj.number }}
-      </li>
-      <li>
-        {{ obj.neighborhood }}
-      </li>
-      <li>
-        {{ obj.zip }}
-      </li>
-      <li>
-        {{ obj.city }}, {{ obj.state }}
-      </li>
-    </ul>
-    <a href="/endereco/editar/{{ obj._id }}">Alterar</a>
+<section class="container">
+  <h2>
+    Endereços
+  </h2>
+
+  <p ng-show="msg.length" class="bg-primary">
+    {{ msg }}
+  </p>
+
+  <div class="row">
+    <div class="col-sm-3">
+      <div class="c-address-new">
+        <a href="/endereco/novo" class="c-address-new-action">Adicionar novo endereço</a>
+      </div>
+    </div>
+    <div class="col-sm-3" ng-repeat="obj in address">
+      <div class="c-address">
+        <div class="c-address-actions">
+          <a href="/endereco/editar/{{ obj._id }}" class="c-address-add">
+            <img src="img/edit.png" />
+          </a>
+          <a href="#" ng-click="removeAddress(obj)" class="c-address-delete">
+            <img src="img/garbage.png" />
+          </a>
+        </div>
+        <div class="c-address-name">
+          Fellipe Azambuja
+        </div>
+        <ul class="c-address-list">
+          <li>{{ obj.street }}, {{ obj.number }}</li>
+          <li>
+            {{ obj.neighborhood }}
+          </li>
+          <li>
+            {{ obj.zip }}
+          </li>
+          <li>
+            {{ obj.city }}, {{ obj.state }}
+          </li>
+        </ul>
+      </div>
+    </div>
   </div>
 </section>

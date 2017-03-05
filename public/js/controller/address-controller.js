@@ -5,8 +5,8 @@ angular.module('miniStore').controller('AddressController', function( $scope, $r
   $scope.msg = '';
 
   // Getting Edit
-  if( $routeParams.addressId ) {
-    addressRecurse.get({ addressId: $routeParams.addressId }, function( data ){
+  if( $routeParams.enderecoId ) {
+    addressRecurse.get({ addressId: $routeParams.enderecoId }, function( data ){
       $scope.address = data;
     }, function( error ){
       $scope.msg = 'Bad';

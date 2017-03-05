@@ -10,7 +10,8 @@ module.exports  = function(app) {
     .post(api.addAddress)
     .get(api.listAddress);
 
-  app.route('/products/:productId')
+  app.route('/address/:addressId')
+    .get(api.searchAddress)
     .delete(api.removeAddress)
     .put(api.updateAddress);
 

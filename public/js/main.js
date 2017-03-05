@@ -18,9 +18,9 @@ angular.module('miniStore', ['ngRoute', 'ministoreServices'])
     controller: 'AddressController'
   });
 
-  $routeProvider.when('/enderecos/editar/:enderecoId', {
+  $routeProvider.when('/endereco/editar/:enderecoId', {
     templateUrl: 'views/address.html',
-    controller: 'ProductController'
+    controller: 'AddressController'
   });
 
   $routeProvider.when('/profile', {

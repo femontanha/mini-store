@@ -3,7 +3,7 @@
     Adicionar Endereço
   </h2>
 
-  <p ng-show="msg.length" class="alert">
+  <p ng-show="msg.length" class="bg-primary">
     {{ msg }}
   </p>
 
@@ -14,18 +14,28 @@
     </div>
 
     <div class="form-group" ng-class="{ 'has-error': form.$submitted && form.number.$invalid }">
-      <label class="control-label" for="street">Numero:</label>
+      <label class="control-label" for="number">Numero:</label>
       <input type="text" name="number" class="form-control" placeholder="99" required ng-model="address.number" />
     </div>
 
     <div class="form-group" ng-class="{ 'has-error': form.$submitted && form.neighborhood.$invalid }">
-      <label class="control-label" for="street">Bairro:</label>
+      <label class="control-label" for="neighborhood">Bairro:</label>
       <input type="text" name="neighborhood" class="form-control" placeholder="Vila Formosa" required ng-model="address.neighborhood" />
     </div>
 
     <div class="form-group" ng-class="{ 'has-error': form.$submitted && form.zip.$invalid }">
-      <label class="control-label" for="street">CEP:</label>
+      <label class="control-label" for="zip">CEP:</label>
       <input type="text" name="zip" class="form-control" placeholder="133345-389" required ng-model="address.zip" />
+    </div>
+
+    <div class="form-group" ng-class="{ 'has-error': form.$submitted && form.city.$invalid }">
+      <label class="control-label" for="city">Cidade:</label>
+      <input type="text" name="city" class="form-control" placeholder="São Paulo" required ng-model="address.city" />
+    </div>
+
+    <div class="form-group" ng-class="{ 'has-error': form.$submitted && form.state.$invalid }">
+      <label class="control-label" for="state">Estado:</label>
+      <input type="text" name="state" class="form-control" placeholder="São Paulo" required ng-model="address.state" />
     </div>
 
     <div class="form-group">

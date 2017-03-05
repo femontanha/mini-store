@@ -1,0 +1,32 @@
+// *************************************
+//
+//   Address New
+//   -> Individual style containers
+//
+// *************************************
+
+$component: c-address-new;
+
+.#{ $component } {
+  border: #ccc 1px dotted;
+  margin-top: rem(30px);
+  min-height: rem(195px);
+  position: relative;
+}
+
+// -------------------------------------
+//   Scaffolding
+// -------------------------------------
+
+// ----- Action ----- //
+
+.#{ $component }-action {
+  display: block;
+  left: 50%;
+  margin-left: rem(-60px);
+  margin-top: rem(-22px);
+  position: absolute;
+  text-align: center;
+  top: 50%;
+  width: rem(120px);
+}
