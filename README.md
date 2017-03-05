@@ -22,5 +22,5 @@ npm i
 We use `GruntJS` as taskrunner to run our server and serve our assets.
 
 ```
-grunt serve
+grunt serve | 
 ```
